@@ -19,5 +19,4 @@ Retrived all the products released and unreleased.
 The payload 1=1 is always true
 and the comments -- after the 1=1 is used to ignore the rest of the query
 
-
-![image](https://user-images.githubusercontent.com/44478872/150627360-f4621ccd-16fd-4f3c-8207-5327516d5c76.png)
+![image](https://user-images.githubusercontent.com/44478872/150627431-2b85f0f1-607b-4ab3-bfdc-c30a0de5ade5.png)
