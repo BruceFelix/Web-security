@@ -1,7 +1,7 @@
 # SQL injection
 SQL injection is an old-but-gold vulnerability responsible fro many high profile data breaches. Although relatively simple to learn, it can potentially be used for some high-severity exploits.
 
-### An image
+![image](https://user-images.githubusercontent.com/44478872/150627310-aeeae347-ad93-4332-a734-5b83f6410342.png)
 
 ## What is an SQL Injection(SQLi)?
 
@@ -26,8 +26,8 @@ A successful SQL injection attack can result in unauthorized access to sensitive
 The majority of SQL injection vulnerabilities can be found quickly and reliably using Burp Suite's web vulnerability scanner.
 SQL injection can be detected manually by using a systematic set of tests against every entry point in the application. This typically involves:
 
-    Submitting the single quote character ' and looking for errors or other anomalies.
-    Submitting some SQL-specific syntax that evaluates to the base (original) value of the entry point, and to a different value, and looking for systematic differences in the resulting application responses.
-    Submitting Boolean conditions such as OR 1=1 and OR 1=2, and looking for differences in the application's responses.
-    Submitting payloads designed to trigger time delays when executed within an SQL query, and looking for differences in the time taken to respond.
-    Submitting OAST payloads designed to trigger an out-of-band network interaction when executed within an SQL query, and monitoring for any resulting interactions.
+   * Submitting the single quote character ' and looking for errors or other anomalies.
+   * Submitting some SQL-specific syntax that evaluates to the base (original) value of the entry point, and to a different value, and looking for systematic differences in the resulting application responses.
+   * Submitting Boolean conditions such as OR 1=1 and OR 1=2, and looking for differences in the application's responses.
+   * Submitting payloads designed to trigger time delays when executed within an SQL query, and looking for differences in the time taken to respond.
+   * Submitting OAST payloads designed to trigger an out-of-band network interaction when executed within an SQL query, and monitoring for any resulting interactions.
